@@ -1,8 +1,12 @@
+import { Console } from 'console';
+
 const inquirer = require('inquirer');
 const fetch = require("node-fetch");
 const open = require('open');
 const colors = require('colors');
 const fs = require('fs');
+
+const arg = require("arg")
 
 colors.setTheme({
     silly: 'rainbow',
@@ -20,6 +24,17 @@ colors.setTheme({
 const banner = `
 |_|  _   _ _|_ |_|  _  ._ _   _  
 | | (_) _>  |_ | | (_) | | | (/_                                             
+`
+
+var archivo = `
+run = "tempCmdStart"
+len = "tempLen"
+
+----- ADVERTENCIA
+NO MENTIR SOBRE LA INFORMACION SINO EL HOST SERA ELIMINADO
+NO TOCAR NADA A NO SER QUE SEA NECESARIO
+SI OCURRE UN ERROR PODEIS PONERLO AQUI (https://github.com/HostHome-of/node-CLI/issues)
+-----
 `
 
 async function info() {
@@ -74,23 +89,64 @@ async function login(mail, psw, web) {
     }
 }
 
-function crearArchivo() {
+async function preguntarPorArchivo() {
+    return await inquirer.prompt([
+        {
+            name: "cmd",
+            message: "Pon el comando de arranque para tu projecto",
+            type: 'input'
+        },
+        {
+            name: "lenguage",
+            message: "Selecciona tu lenguage de programacion",
+            type: 'list',
+            choices: ["ruby", "python", "nodejs", "scala", "clojure", "cs", "php"]
+        }
+    ])
+}
+
+async function crearArchivo(verbose, cmd, lenguage) {
+    if (verbose) {
+        console.log("----- LOGS".info)
+    }
     if (fs.existsSync('.hosthome')) {
-        fs.writeFile(".hosthome", "Hey there!", function(err) {
-            if(err) {
-                return console.log(err);
+        fs.writeFile(".hosthome", archivo.replace('tempCmdStart', cmd).replace('tempLen', lenguage), function (err) {
+            if (err) {
+                return console.error(err);
             }
-            console.log("Archivo creado".info);
+            if (verbose) {
+                console.log("Archivo localizado".warn);
+                console.log("Eliminando archivos");
+                console.log("Creando archivo")
+                console.log("Reescribiendo archivo".info);
+            }
         });
-    }   
+    } else {
+        fs.appendFile('.hosthome', archivo.replace('tempCmdStart', cmd).replace('tempLen', lenguage), function (err) {
+            if (err) throw err;
+            if (verbose) {
+                console.log('Archivo creado');
+                console.log("Reescribiendo");
+            }
+        });
+    }
 }
 
-function crearProjecto() {
-    crearArchivo()
+async function crearProjecto(verbose) {
+    preguntar = await preguntarPorArchivo()
+
+    await crearArchivo(verbose, preguntar.cmd, preguntar.lenguage)
 }
 
-const main = async () => {
+const crear = async (options) => {
+
+    var verbose = false;
     var website;
+
+    if (options["verbose"]) {
+        verbose = true;
+    }
+
     await fetch('https://raw.githubusercontent.com/HostHome-of/config/main/config.json').then(
         response => response.json()
     ).then(data => {
@@ -114,8 +170,43 @@ const main = async () => {
     if (!usuario == false) {
         console.log(colors.green("\n-> Hola " + usuario["nombre"] + " " + usuario["segundoNombre"] + "\n"));
 
-        crearProjecto()
+        await crearProjecto(verbose)
     }
 }
 
-main()
+
+function parseArgumentsIntoOptions(rawArgs) {
+    const args = arg(
+        {
+            '--verbose': Boolean,
+            "--eliminar": Boolean,
+            "--stats": Boolean
+        },
+        {
+            argv: rawArgs.slice(2),
+        }
+    );
+    return {
+        verbose: args['--verbose'] || false,
+        eliminar: args['--eliminar'] || false,
+        stats: args['--stats'] || false,
+    };
+}
+
+export function cli(args) {
+    let options = parseArgumentsIntoOptions(args);
+    // console.log(options)
+    
+    if (!options["eliminar"] && !options["stats"]) {
+        crear(options)
+    } else {
+        if(options["eliminar"]) {
+            // eliminar()
+        } else if (options["stats"]) {
+            // stats()
+        } else {
+            console.log("Necesitas porner algo valido".error)
+            console.log("Mirar docs")
+        }
+    }
+}
