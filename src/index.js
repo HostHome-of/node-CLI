@@ -131,7 +131,7 @@ async function crearArchivo(verbose, cmd, lenguage) {
 }
 
 async function crearProjecto(verbose) {
-    preguntar = await preguntarPorArchivo()
+    const preguntar = await preguntarPorArchivo()
 
     await crearArchivo(verbose, preguntar.cmd, preguntar.lenguage)
 }
@@ -140,6 +140,8 @@ const crear = async (options) => {
 
     var verbose = false;
     var website;
+    var infoUsr;
+    var usuario;
 
     if (options["verbose"]) {
         verbose = true;
@@ -154,16 +156,17 @@ const crear = async (options) => {
         console.log("\n--- Login ---\n");
     });
 
-    const infoUsr = await info();
+    infoUsr = await info();
 
     const psw = infoUsr.psw;
     const mail = infoUsr.mail;
 
     if (psw == 'null' || mail == 'null') {
-        process.exit(0)
+        console.log("Intenta poner algo".error);
+        process.exit(0);
     }
 
-    const usuario = await login(mail, psw, website);
+    usuario = await login(mail, psw, website);
 
     if (!usuario == false) {
         console.log(colors.green("\n-> Hola " + usuario["nombre"] + " " + usuario["segundoNombre"] + "\n"));
