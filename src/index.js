@@ -1,5 +1,3 @@
-import { Console } from 'console';
-
 const inquirer = require('inquirer');
 const fetch = require("node-fetch");
 const open = require('open');
@@ -156,16 +154,16 @@ const crear = async (options) => {
         console.log("\n--- Login ---\n");
     });
 
-    usuario = await info();
+    const infoUsr = await info();
 
-    const psw = usuario.psw;
-    const mail = usuario.mail;
+    const psw = infoUsr.psw;
+    const mail = infoUsr.mail;
 
     if (psw == 'null' || mail == 'null') {
         process.exit(0)
     }
 
-    usuario = await login(mail, psw, website);
+    const usuario = await login(mail, psw, website);
 
     if (!usuario == false) {
         console.log(colors.green("\n-> Hola " + usuario["nombre"] + " " + usuario["segundoNombre"] + "\n"));
