@@ -69,9 +69,3 @@ Yarn a dejado de utilizar el comando `install` y lo a remplazado por el comando 
 Al igual que si hay un error con `yarn` una de las posibilidades es instalartelo con `npm`pero si eso sigue fallando deberias de contactarnos y enseñandonos el error en nuestro [github](https://github.com/HostHome-of) y te creas un nuevo issue. Y es exactamente los mismo que con `npm` si te sigue fallando intentalo instalar con `pip` que estan las instrucciones en la siguiente pagina de los documentos de los CLIs.
 
 ![CLI-Node](https://raw.githubusercontent.com/HostHome-of/website/main/src/static/images/cli-yarn.png)
-
-# Explicacion en video
-
-Con este video se podra ver como instalar el CLI con `npm` y ver como seria el tener que hacer login e comenzar un projecto.
-
-<script id="asciicast-nFooc9w8lOshVbwJItsshC8F1" src="https://asciinema.org/a/nFooc9w8lOshVbwJItsshC8F1.js" async></script>
