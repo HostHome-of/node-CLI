@@ -1,18 +1,4 @@
-<style>
-code {
-    background: #2a2a2a !important;
-    color: #fff !important;
-}
 
-.md-clipboard {
-    color: #fff !important; 
-}
-
-p code {
-    color: var(--md-code-fg-color) !important;
-    background-color: var(--md-code-bg-color) !important;
-}
-</style>
 
 # CLI | Node
 
