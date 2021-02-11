@@ -1,18 +1,18 @@
 {
-  "name": "@maubg/hosthome-cli",
-  "version": "3.0.6",
+  "name": "@hosthome/hosthome-cli",
+  "version": "3.0.8",
   "description": "El CLI de HostHome para node",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {
-    "@maubg/hosthome": "bin/hosthome",
-    "hosthome": "bin/hosthome"
-  },
   "publishConfig": {
     "access": "public"
+  },
+  "bin": {
+    "@hosthome/hosthome": "bin/hosthome",
+    "hosthome": "bin/hosthome"
   },
   "repository": "git+https://github.com/HostHome-of/node-CLI.git",
   "keywords": [

@@ -14,26 +14,26 @@ npm install --global yarn
 
 ## Instalacion
 
-Puedes instalartelo con [npm](https://www.npmjs.com/package/@maubg/hosthome-cli) or you can install it with [yarn](https://yarnpkg.com/package/@maubg/hosthome-cli)
+Puedes instalartelo con [npm](https://www.npmjs.com/package/@hosthome/hosthome-cli) or you can install it with [yarn](https://yarnpkg.com/package/@hosthome/hosthome-cli)
 
 ### Node - instalacion
 
 el comando seria asi
 
 ```
-npm i -g @maubg/hosthome-cli
+npm i -g @hosthome/hosthome-cli
 ```
 
 Y al ejecutar el comando deberias de ver algo asi
 
 ```
-C:\> npm i -g @maubg/hosthome-cli
+C:\> npm i -g @hosthome/hosthome-cli
  (( □□□□□□□... )) Recieven package ...
 ```
 
 Notar como le ponemos la bandera **-g** esto es muy importante ya que si no le ponermos esa bandera el CLI sera reconocido como un "package" o como un modulo y no queremos eso. Entoces hay que hacerlo _global_
 
-Tambien se puede cambiar el `npm i` por el `npm install` ya que el comando es exactamente igual. Tambien abria que dejar el `@maubg/` porque si no npm no encontrara el modulo y no lo instalara como un CLI.
+Tambien se puede cambiar el `npm i` por el `npm install` ya que el comando es exactamente igual. Tambien abria que dejar el `@hosthome/` porque si no npm no encontrara el modulo y no lo instalara como un CLI.
 
 Si hay un error lo mas posible es que sea nuestra culpa y te salgan cosas asi
 
@@ -47,18 +47,18 @@ Si eso te pasa con `npm` lo mas comun seria probar a hacerlo con yarn. Si eso no
 
 ### Yarn - instalacion
 
-Una opcion preferiblemente mejor es instalarlo con [yarn](https://yarnpkg.com/package/@maubg/hosthome-cli) ya que yarn hace una instalacion mas rapida.
+Una opcion preferiblemente mejor es instalarlo con [yarn](https://yarnpkg.com/package/@hosthome/hosthome-cli) ya que yarn hace una instalacion mas rapida.
 
 Comando :
 
 ```
-yarn global add @maubg/hosthome-cli
+yarn global add @hosthome/hosthome-cli
 ```
 
 Al ejecutar el comando deberia de salirte unas barras de carga enseñandote que se esta instalando.
 
 ```
-C:\> yarn global add @maubg/hosthome-cli
+C:\> yarn global add @hosthome/hosthome-cli
  [ ############################............... ] Reciebing package ...
 ```
 
