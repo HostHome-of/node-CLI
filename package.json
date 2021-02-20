@@ -1,5 +1,5 @@
 {
-  "name": "@HostHome-of/hosthome-cli",
+  "name": "hosthome-cli",
   "version": "4.0.0",
   "description": "El CLI de HostHome para node",
   "main": "src/index.js",
