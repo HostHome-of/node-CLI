@@ -49,7 +49,7 @@ len = "tempLen"
 ----- ADVERTENCIA
 NO MENTIR SOBRE LA INFORMACION SINO EL HOST SERA ELIMINADO
 NO TOCAR NADA A NO SER QUE SEA NECESARIO
-SI OCURRE UN ERROR PODEIS PONERLO AQUI (https://github.com/HostHome-of/node-CLI/issues)
+SI OCURRE UN ERROR PODEIS PONERLO AQUI (https://github.com/HostHome-oficial/node-CLI/issues)
 -----
 `
 
@@ -73,7 +73,7 @@ async function info() {
 
 async function login(mail, psw, web) {
     var data;
-    await fetch(web + 'login?psw=' + psw + '&mail=' + mail, {
+    await fetch(web + 'login?psw=' + psw + '&mail=' + mail + "&consola=si", {
         method: "POST"
     }).then(
         response => response.json()

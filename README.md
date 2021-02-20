@@ -66,6 +66,6 @@ En este comando podemos ver de que le ponemos `global` por la misma razon a la q
 
 Yarn a dejado de utilizar el comando `install` y lo a remplazado por el comando `add` eso hay que tenerlo en cuenta para que nuestra instalacion de el CLI de yarn funcione.
 
-Al igual que si hay un error con `yarn` una de las posibilidades es instalartelo con `npm`pero si eso sigue fallando deberias de contactarnos y enseñandonos el error en nuestro [github](https://github.com/HostHome-of) y te creas un nuevo issue. Y es exactamente los mismo que con `npm` si te sigue fallando intentalo instalar con `pip` que estan las instrucciones en la siguiente pagina de los documentos de los CLIs.
+Al igual que si hay un error con `yarn` una de las posibilidades es instalartelo con `npm`pero si eso sigue fallando deberias de contactarnos y enseñandonos el error en nuestro [github](https://github.com/HostHome-oficial) y te creas un nuevo issue. Y es exactamente los mismo que con `npm` si te sigue fallando intentalo instalar con `pip` que estan las instrucciones en la siguiente pagina de los documentos de los CLIs.
 
 ![CLI-Node](https://raw.githubusercontent.com/HostHome-of/website/main/src/static/images/cli-yarn.png)
