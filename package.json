@@ -9,7 +9,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/@hosthome"
+    "registry": "https://npm.pkg.github.com/@HostHome-of"
   },
   "bin": {
     "@hosthome/hosthome": "bin/hosthome",
