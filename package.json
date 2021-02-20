@@ -1,6 +1,6 @@
 {
-  "name": "@hosthome/hosthome-cli",
-  "version": "3.0.9",
+  "name": "hosthome-cli",
+  "version": "4.0.1",
   "description": "El CLI de HostHome para node",
   "main": "src/index.js",
   "scripts": {
@@ -8,14 +8,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "bin": {
     "@hosthome/hosthome": "bin/hosthome",
     "hosthome": "bin/hosthome"
   },
-  "repository": "git+https://github.com/HostHome-of/node-CLI.git",
+  "repository": "git+https://github.com/HostHome-oficial/node-CLI.git",
   "keywords": [
     "cli",
     "hosthome",
@@ -26,11 +25,12 @@
   "author": "Maubg",
   "license": "SEE LICENSE IN ./LICENSE",
   "bugs": {
-    "url": "https://github.com/HostHome-of/node-CLI/issues"
+    "url": "https://github.com/HostHome-oficial/node-CLI/issues"
   },
-  "homepage": "https://github.com/HostHome-of/node-CLI#readme",
+  "homepage": "https://github.com/HostHome-oficial/node-CLI#readme",
   "dependencies": {
     "@babel/node": "^7.12.10",
+    "@hosthome/hosthome-cli": "^3.0.9",
     "arg": "^5.0.0",
     "colors": "^1.4.0",
     "esm": "^3.2.25",
