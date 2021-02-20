@@ -8,7 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
-    "access": "public",
     "registry": "https://npm.pkg.github.com"
   },
   "bin": {
