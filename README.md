@@ -14,20 +14,20 @@ npm install --global yarn
 
 ## Instalacion
 
-Puedes instalartelo con [npm](https://www.npmjs.com/package/@hosthome/hosthome-cli) or you can install it with [yarn](https://yarnpkg.com/package/@hosthome/hosthome-cli)
+Puedes instalartelo con [npm](https://www.npmjs.com/package/@HostHome-oficial/hosthome-cli) or you can install it with [yarn](https://yarnpkg.com/package/@HostHome-oficial/hosthome-cli)
 
 ### Node - instalacion
 
 el comando seria asi
 
 ```
-npm i -g @hosthome/hosthome-cli
+npm i -g @HostHome-oficial/hosthome-cli
 ```
 
 Y al ejecutar el comando deberias de ver algo asi
 
 ```
-C:\> npm i -g @hosthome/hosthome-cli
+C:\> npm i -g @HostHome-oficial/hosthome-cli
  (( □□□□□□□... )) Recieven package ...
 ```
 
@@ -47,18 +47,18 @@ Si eso te pasa con `npm` lo mas comun seria probar a hacerlo con yarn. Si eso no
 
 ### Yarn - instalacion
 
-Una opcion preferiblemente mejor es instalarlo con [yarn](https://yarnpkg.com/package/@hosthome/hosthome-cli) ya que yarn hace una instalacion mas rapida.
+Una opcion preferiblemente mejor es instalarlo con [yarn](https://yarnpkg.com/package/@HostHome-oficial/hosthome-cli) ya que yarn hace una instalacion mas rapida.
 
 Comando :
 
 ```
-yarn global add @hosthome/hosthome-cli
+yarn global add @HostHome-oficial/hosthome-cli
 ```
 
 Al ejecutar el comando deberia de salirte unas barras de carga enseñandote que se esta instalando.
 
 ```
-C:\> yarn global add @hosthome/hosthome-cli
+C:\> yarn global add @HostHome-oficial/hosthome-cli
  [ ############################............... ] Reciebing package ...
 ```
 

@@ -30,7 +30,7 @@
   "homepage": "https://github.com/HostHome-oficial/node-CLI#readme",
   "dependencies": {
     "@babel/node": "^7.12.10",
-    "@hosthome/hosthome-cli": "^3.0.9",
+    "@HostHome-oficial/hosthome-cli": "^3.0.9",
     "arg": "^5.0.0",
     "colors": "^1.4.0",
     "esm": "^3.2.25",
